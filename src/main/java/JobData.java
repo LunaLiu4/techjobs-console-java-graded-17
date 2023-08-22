@@ -92,17 +92,11 @@ public class JobData {
         loadData();
 
         // TODO - implement this method
-//        return null;
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
         for (HashMap<String,String> row: allJobs){
-            boolean searched = false;
             for (Map.Entry<String, String> job: row.entrySet()){
                 if (job.getValue().toLowerCase().contains(value.toLowerCase())){
-                    searched = true;
-                }
-                if (searched){
                     jobs.add(row);
-                    searched = false;
                 }
             }
         }
